@@ -11,9 +11,9 @@ jobs:
     steps:
       - name: Create Clean Directory and Clone
         run: |
-          # Создаем отдельную чистую папку, чтобы избежать ошибки 128
           mkdir workspace
           cd workspace
+          # Указан полный корректный путь к репозиторию
           git clone --recursive https://github.com .
           
           # Автоматически внедряем частоту 25 МГц в конфигурацию
