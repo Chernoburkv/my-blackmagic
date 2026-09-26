@@ -1,0 +1,106 @@
+Build started at 2026-09-26T15:26:42.160553
+Main binary: C:\Users\ASUTP-NB\AppData\Local\Programs\Python\Python311\python.exe
+Build Options: --cross-file=cross-file/f4discovery.ini --native-file=cross-file/pc_native.ini
+Python system: Windows
+The Meson build system
+Version: 1.12.1
+Source dir: C:\blackmagic
+Build dir: C:\blackmagic\build
+Build type: cross build
+WARNING: Failed to activate VS environment: Could not find C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe
+Project name: Black Magic Debug
+Project version: 2.1.0
+-----------
+Detecting compiler via: `C:/ARMGCC/bin/arm-none-eabi-gcc.exe --version` -> 0
+stdout:
+arm-none-eabi-gcc.exe (xPack GNU Arm Embedded GCC x86_64) 15.2.1 20251203
+Copyright (C) 2025 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-----------
+Running command: -cpp -x c -E -dM -
+-----
+-----------
+Detecting linker via: `C:/ARMGCC/bin/arm-none-eabi-gcc.exe -Wl,--version` -> 0
+stdout:
+GNU ld (xPack GNU Arm Embedded GCC x86_64) 2.45.1.20251203
+Copyright (C) 2025 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+-----------
+stderr:
+collect2 version 15.2.1 20251203
+C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld.exe -plugin C:/ARMGCC/bin/../libexec/gcc/arm-none-eabi/15.2.1/liblto_plugin.dll -plugin-opt=C:/ARMGCC/bin/../libexec/gcc/arm-none-eabi/15.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\ASUTP-NB\AppData\Local\Temp\cc6Gu4ss.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/ARMGCC/bin/../arm-none-eabi -X C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/crti.o C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/crtbegin.o C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/crt0.o -LC:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1 -LC:/ARMGCC/bin/../lib/gcc -LC:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib -LC:/ARMGCC/bin/../arm-none-eabi/lib --version --start-group -lgcc -lc --end-group C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/crtend.o C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/crtn.o
+-----------
+Sanity check compiler command line: C:/ARMGCC/bin/arm-none-eabi-gcc.exe -o sanity_check_for_c_cross.exe sanity_check_for_c.c -DSTM32_HSE_HZ=25000000 -D_FILE_OFFSET_BITS=64 -c
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Cannot run cross check
+C compiler for the host machine: C:/ARMGCC/bin/arm-none-eabi-gcc.exe (gcc 15.2.1 "arm-none-eabi-gcc.exe (xPack GNU Arm Embedded GCC x86_64) 15.2.1 20251203")
+C linker for the host machine: C:/ARMGCC/bin/arm-none-eabi-gcc.exe ld.bfd 2.45.1.20251203
+-----------
+Detecting archiver via: `C:/ARMGCC/bin/arm-none-eabi-ar.exe --version` -> 0
+stdout:
+GNU ar (xPack GNU Arm Embedded GCC x86_64) 2.45.1.20251203
+Copyright (C) 2025 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) any later version.
+This program has absolutely no warranty.
+-----------
+-----------
+Detecting compiler via: `C:/ARMGCC/bin/arm-none-eabi-gcc.exe --version` -> 0
+stdout:
+arm-none-eabi-gcc.exe (xPack GNU Arm Embedded GCC x86_64) 15.2.1 20251203
+Copyright (C) 2025 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-----------
+Running command: -cpp -x c -E -dM -
+-----
+-----------
+Detecting linker via: `C:/ARMGCC/bin/arm-none-eabi-gcc.exe -Wl,--version` -> 0
+stdout:
+GNU ld (xPack GNU Arm Embedded GCC x86_64) 2.45.1.20251203
+Copyright (C) 2025 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+-----------
+stderr:
+collect2 version 15.2.1 20251203
+C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld.exe -plugin C:/ARMGCC/bin/../libexec/gcc/arm-none-eabi/15.2.1/liblto_plugin.dll -plugin-opt=C:/ARMGCC/bin/../libexec/gcc/arm-none-eabi/15.2.1/lto-wrapper.exe -plugin-opt=-fresolution=C:\Users\ASUTP-NB\AppData\Local\Temp\ccQiZ0gw.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc --sysroot=C:/ARMGCC/bin/../arm-none-eabi -X C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/crti.o C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/crtbegin.o C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/crt0.o -LC:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1 -LC:/ARMGCC/bin/../lib/gcc -LC:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib -LC:/ARMGCC/bin/../arm-none-eabi/lib --version --start-group -lgcc -lc --end-group C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/crtend.o C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/crtn.o
+-----------
+Sanity check compiler command line: C:/ARMGCC/bin/arm-none-eabi-gcc.exe -o sanity_check_for_c.exe sanity_check_for_c.c -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld.exe: C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib\libc.a(libc_a-exit.o): in function `exit':
+exit.c:(.text.exit+0x28): undefined reference to `_exit'
+C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld.exe: C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib\libc.a(libc_a-closer.o): in function `_close_r':
+closer.c:(.text._close_r+0x18): undefined reference to `_close'
+C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld.exe: C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib\libc.a(libc_a-lseekr.o): in function `_lseek_r':
+lseekr.c:(.text._lseek_r+0x24): undefined reference to `_lseek'
+C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld.exe: C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib\libc.a(libc_a-readr.o): in function `_read_r':
+readr.c:(.text._read_r+0x24): undefined reference to `_read'
+C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld.exe: C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib\libc.a(libc_a-writer.o): in function `_write_r':
+writer.c:(.text._write_r+0x24): undefined reference to `_write'
+C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld.exe: C:/ARMGCC/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib\libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+sbrkr.c:(.text._sbrk_r+0x18): undefined reference to `_sbrk'
+collect2.exe: error: ld returned 1 exit status
+
+-----
+Compiler for language c for the build machine not found.
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: arm
+Host machine cpu: arm
+Target machine cpu family: arm
+Target machine cpu: arm
+
+meson.build:87:19: ERROR: Tried to access compiler for language "c", not specified for build machine.
