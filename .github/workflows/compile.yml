@@ -9,12 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone Clean Black Magic Repository
+      - name: Create Clean Directory and Clone
         run: |
+          # Создаем отдельную чистую папку, чтобы избежать ошибки 128
+          mkdir workspace
+          cd workspace
           git clone --recursive https://github.com .
-
-      - name: Inject 25MHz into Configuration
-        run: |
+          
+          # Автоматически внедряем частоту 25 МГц в конфигурацию
           sed -i "s/rtt_support = true/rtt_support = true\n\n[built-in options]\nc_args = ['-DSTM32_HSE_HZ=25000000']\ncpp_args = ['-DSTM32_HSE_HZ=25000000']/g" cross-file/f4discovery.ini
 
       - name: Install Dependencies
@@ -22,16 +24,14 @@ jobs:
           sudo apt update
           sudo apt install gcc-arm-none-eabi meson ninja-build -y
 
-      - name: Configure Meson
+      - name: Configure and Compile Firmware
         run: |
+          cd workspace
           meson setup build --cross-file cross-file/f4discovery.ini
-
-      - name: Compile with Ninja
-        run: |
           ninja -C build
 
       - name: Upload Hex Artifact
         uses: actions/upload-artifact@v4
         with:
           name: bmd-f4discovery-25mhz
-          path: build/*.hex
+          path: workspace/build/*.hex
